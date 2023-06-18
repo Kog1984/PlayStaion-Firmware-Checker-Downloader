@@ -1,5 +1,5 @@
 # PS4-Firmware-Downloader
-checks and Downloads PS4 Firmware : for reinstallation & sysupdate
+Checks and Downloads PS4 Firmware from Sony Website: for reinstallation & sysupdate
 <hr>
 What does it do? Compares byte file size of PS4 website update files vs your download version of update files, download if size difference<br>
 <br>
