@@ -59,12 +59,8 @@ Func ScrapeLinks($console)
         Local $sFilePath = _WinAPI_GetTempFileName(@TempDir)
 
         ; Download the file in the background with the selected option of 'force a reload from the remote site.'
-        Local $hDownload = InetGet($firmware_host, $sFilePath, $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
-
-        ; Wait for the download to complete by monitoring when the 2nd index value of InetGetInfo returns True.
-        Do
-                Sleep(250)
-        Until InetGetInfo($hDownload, $INET_DOWNLOADCOMPLETE)
+        Local $hDownload = InetGet($firmware_host, $sFilePath, $INET_FORCERELOAD, $INET_DOWNLOADWAIT)
+		If $hDownload = 0 Then Exit ;Quit offline
 
         ; Retrieve the number of total bytes received and the filesize.
         Local $iBytesSize = InetGetInfo($hDownload, $INET_DOWNLOADREAD)
