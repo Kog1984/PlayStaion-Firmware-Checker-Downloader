@@ -119,7 +119,7 @@ $cache_update = FileGetSize ( $update_zip )
 ConsoleWrite($cache_update&@CRLF);Filesize in bytes
 If $online_update <> $cache_update Then
 	If Not IsDeclared("iMsgBoxAnswer") Then Local $iMsgBoxAnswer
-	$iMsgBoxAnswer = MsgBox(8193,$TITLE,"A New " & $text& " File is Available will start Downloading "&@CRLF&"Please wait this may take upto 10-30 mins",30)
+	$iMsgBoxAnswer = MsgBox(8193,$TITLE,"A New " & $text& " File is Available for "&$console&" will start Downloading "&@CRLF&"Please wait this may take upto 10-30 mins",30)
 	Select
 		Case $iMsgBoxAnswer = 1 ;OK
 			ConsoleWrite("Downloading "&$console&" "&$text&" File........"&@CRLF)
