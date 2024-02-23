@@ -11,3 +11,6 @@ Where does it save file?<br>
 <br>
 <br>
 Recommend uses? Put in your startup folder so will check for updates when your computer boots up
+
+
+Dont use on windows 7 it has bug, tested on Win 10/11 only it is also reporting a virus via windows anti virus thing is fake tho just downloads the firmware
